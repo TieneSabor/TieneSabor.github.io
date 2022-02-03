@@ -45,12 +45,10 @@
             the wind with the lowest drag side. <br>
             <br>
             <img src="file:../Picture/Schematic.jpg" style="width: 366px; height: 230px;"
-
               title="Schematic"><br>
             The control system schematic<br>
             <br>
             <img src="file:../Picture/Drone.png" style="width: 366px; height: 230px;"
-
               title="Drone"><br>
             The external design of our drone <br>
             <br>
@@ -63,20 +61,17 @@
           </td>
           <td style="width:80%;text-align:center"><br>
             <img src="file:../Picture/belly_drag.png" style="width: 600px; height: 480px;"
-
               title="BellyDrag"><br>
             We use ANSYS to understand how wind affects vertical flight. This
             shows the wind comes from the drone's belly.<br>
             <br>
             <img src="file:../Picture/DragModel.png" style="width: 400px; height: 320px;"
-
               title="DragModel"><br>
             We assume the drag is the function of pitch angle, yaw angle and the
             air speed, so we can curve-fit the ANSYS simulation results and
             produce a drag model.<br>
             <br>
             <img src="file:../Picture/Simulation_Result.png" style="width: 480px; height: 400px;"
-
               title="SimulationResult"><br>
             Using our drag model as a reference, we use Simulink to validate
             whether PID controller can stabilize the drone. As the picture
@@ -97,18 +92,13 @@
           </td>
         </tr>
         <!--
-        <tr>          <td style="width:20%;text-align:center">
-            <h2>Galleries</h2>          </td>
-          <td style="width:80%;text-align:center"><br>            <img src="../Picture/Unprocessed/FSAE_EP2.jpg" style="width: 480px; height: 300px;"
-              alt=""> <br>
-            Ep 2: Second generation race car in NTU Racing Team<br>            <br>
-            <img src="../Picture/Unprocessed/FSAE_EP1.JPG" style="width: 480px; height: 300px;"
-              alt=""> <br>            Ep 1: First generation race car in NTU Racing Team<br>
-            <br>          </td>
+        <tr>          <td style="width:20%;text-align:center">            <h2>Galleries</h2>          </td>
+          <td style="width:80%;text-align:center"><br>            <img src="../Picture/Unprocessed/FSAE_EP2.jpg" style="width: 480px; height: 300px;"              alt=""> <br>
+            Ep 2: Second generation race car in NTU Racing Team<br>            <br>            <img src="../Picture/Unprocessed/FSAE_EP1.JPG" style="width: 480px; height: 300px;"
+              alt=""> <br>            Ep 1: First generation race car in NTU Racing Team<br>            <br>          </td>
         </tr>				-->
       </tbody>
     </table>
     <p></p>
-    
   </body>
 </html>

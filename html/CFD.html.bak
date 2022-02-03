@@ -93,7 +93,7 @@
             front(Red Line) pass through a 2D fuel tube.
             <h4> Simulation </h4>
             <img src="file:../Picture/GIF/DSMCFoam.gif" style="width: 500px; height: 340px;"
-              title="MaNumber"> <br>
+              title="DSMCFoam"> <br>
             This is the simulation when shock wave pass through 2D fuel
             bubble.&nbsp; We can see the variation of the gas mixture density
             over time.&nbsp; Reaction simulation is not included in this
@@ -101,8 +101,9 @@
             <h4> Current Work </h4>
             I will compare the simulation result between those with and without
             reaction.&nbsp; If the reaction is simulated, there will be
-            combustion happens on the boundary between Oxigen and fuel.&nbsp;
-            Therefore, we can seehow shock wave affect the combustion.<br>
+            combustion happens on the boundary between Oxigen and
+            fuel.&nbsp; Therefore, we can seehow shock wave affect the
+            combustion.<br>
             <br>
           </td>
         </tr>
