@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Propeller Driven Car</title>
+  </head>
+  <body>
+    <table style="width:100%" border="2">
+      <tbody>
+        <tr>
+          <td style="text-align:center" colspan="2">
+            <h2>Course Project: Propeller Driven Vehicle </h2>
+          </td>
+        </tr>
+        <tr>
+          <td style="width:20%;text-align:center"> <h2>Course Requirement</h2> </td>
+          <td style="width:80%;text-align:left"> <br>
+            1. We will have to design a "20*30 cm" automative vehicle which is
+            driven by a propeller.<br>
+            2. It will need to keep itself on a track marked by black duct tape.<br>
+            3. It will need to track a set of speed set points with error less
+            than 5cm/s.<br>
+            4. It will need to overtake another propeller driven vehicle 2 times
+            and overtook by that vehicle(also 2 times) when driving on an oval
+            tack. <br>
+            <br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width:20%;text-align:center"> <h2>Design Concepts</h2> </td>
+          <td style="width:80%;text-align:left"> <br>
+            My job is to design the control system, including the software and
+            hardware, to meet the course requirements. My design has following
+            features:<br>
+            1. I divided the job into 2 parts: the track follow control loop and
+            speed control loop, and I deployed them individually on 2 different
+            arduino board. This is because it can prevent a temporary failure in
+            one loop to interfere another loop. I also connected 2 boards by
+            I2C.<br>
+            2. We used a series of infra-red sensor to detect the duct tape
+            position. The track follow control is governed by a simple law: if
+            the duct tape is in the left side, then the vehicle will turn right.<br>
+            3. We used optical encoder to measure current wheel speed and used a
+            PID controller to calculate the propeller motor torque command. We
+            also record current mileage to determine when we want to "overtake"
+            one another.<br>
+            4. We used a ultra-sonic sensor to measure the distance between 2
+            vehicles, so that we can keep safe distance between 2 cars.<br>
+            <br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width:20%;text-align:center"> <h2>Implementation and Result</h2> </td>
+          <td style="width:80%;text-align:center"><br>
+            <h3> The Propeller Driven Vehicle </h3>
+            <img src="file:../Picture/FanCar.jpg" style="width: 350px; height: 250px;"
+              title="PropellerDrivenVehicle"> <br>
+            Our Final Work --- One of the Propeller Driven Vehicle. <br>
+            <h3> Overtake Maneuver </h3>
+            <img src="file:../Picture/GIF/overtake_mode1.gif" style="width: 480px; height: 270px;"
+              title="Overtake_Mode1"><br>
+            The overtake maneuver---First Mode <br>
+            <br>
+            <img src="file:../Picture/GIF/overtake_mode2.gif" style="width: 480px; height: 270px;"
+              title="Overtake_Mode2"><br>
+            The overtake maneuver---Second Mode <br>
+            <br>
+            <h3> Track and Front Car Following </h3>
+            <img src="file:../Picture/GIF/Adaptive_Cruise_Control.gif" style="width: 480px; height: 270px;"
+              title="ACC"><br>
+            Track and front car following on an oval track. <br>
+            <br>
+            <br>
+            <br>
+          </td>
+        </tr>
+        <!--
+        <tr>          <td style="width:20%;text-align:center"> Galleries </td>
+          <td style="width:80%;text-align:center"><br>            <br>
+            <br>          </td>
+        </tr>				-->
+      </tbody>
+    </table>
+  </body>
+</html>

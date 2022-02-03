@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>TailSitter</title>
+  </head>
+  <body>
+    <table style="width:100%" border="2">
+      <tbody>
+        <tr>
+          <td style="text-align:center" colspan="2">
+            <h2>Tandem Wing Tail Sitter</h2>
+          </td>
+        </tr>
+        <tr>
+          <td style="width:20%;text-align:center">
+            <h2>Project Goal</h2>
+          </td>
+          <td style="width:80%;text-align:left"> <br>
+            The project started from the "Drone Innovation and Application
+            Competition". The competition required participants to bring out a
+            proposal of a novel UAV that <br>
+            1. can carry a 2 kg package<br>
+            2. finish a 15 km journey<br>
+            3. has weight less than 10 kg<br>
+            By the way, the winner can have a chance to actually build the
+            proposed aircraft funded by the government. <br>
+            <br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width:20%;text-align:center">
+            <h2>Design Concepts</h2>
+          </td>
+          <td style="width:80%;text-align:left"> <br>
+            Our proposal has following characteristic: <br>
+            1. We adopt tandem wing configuration because of better lift-drag
+            ratio. <br>
+            2. A tail-sitter design can enable the UAV to vertically take-off
+            and land. <br>
+            3. A tail-sitter had larger-than-1 thrust-to-weight ratio, which
+            makes the drone agile. <br>
+            To ease the instability for tail sitters flying in strong wind, we
+            proposed a control scheme, that is, the drone will choose to face
+            the wind with the lowest drag side. <br>
+            <br>
+            <img src="file:../Picture/Schematic.jpg" style="width: 366px; height: 230px;"
+
+              title="Schematic"><br>
+            The control system schematic<br>
+            <br>
+            <img src="file:../Picture/Drone.png" style="width: 366px; height: 230px;"
+
+              title="Drone"><br>
+            The external design of our drone <br>
+            <br>
+            <br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width:20%;text-align:center">
+            <h2>Simulation and Validation for the design.</h2>
+          </td>
+          <td style="width:80%;text-align:center"><br>
+            <img src="file:../Picture/belly_drag.png" style="width: 600px; height: 480px;"
+
+              title="BellyDrag"><br>
+            We use ANSYS to understand how wind affects vertical flight. This
+            shows the wind comes from the drone's belly.<br>
+            <br>
+            <img src="file:../Picture/DragModel.png" style="width: 400px; height: 320px;"
+
+              title="DragModel"><br>
+            We assume the drag is the function of pitch angle, yaw angle and the
+            air speed, so we can curve-fit the ANSYS simulation results and
+            produce a drag model.<br>
+            <br>
+            <img src="file:../Picture/Simulation_Result.png" style="width: 480px; height: 400px;"
+
+              title="SimulationResult"><br>
+            Using our drag model as a reference, we use Simulink to validate
+            whether PID controller can stabilize the drone. As the picture
+            shows, the drone position(of 3 axis) converges to a set point with
+            given initial condition.<br>
+            <br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width:20%;text-align:center">
+            <h2>Future Works</h2>
+          </td>
+          <td style="width:80%;text-align:left"><br>
+            We are fortunately granted "High Dinstinction Award". (top 5 over 57
+            teams). Also, we are currently manufacturing a scaled model to prove
+            this concept with funds from Taipei Computer Association. <br>
+            <br>
+          </td>
+        </tr>
+        <!--
+        <tr>          <td style="width:20%;text-align:center">
+            <h2>Galleries</h2>          </td>
+          <td style="width:80%;text-align:center"><br>            <img src="../Picture/Unprocessed/FSAE_EP2.jpg" style="width: 480px; height: 300px;"
+              alt=""> <br>
+            Ep 2: Second generation race car in NTU Racing Team<br>            <br>
+            <img src="../Picture/Unprocessed/FSAE_EP1.JPG" style="width: 480px; height: 300px;"
+              alt=""> <br>            Ep 1: First generation race car in NTU Racing Team<br>
+            <br>          </td>
+        </tr>				-->
+      </tbody>
+    </table>
+    <p></p>
+    
+  </body>
+</html>

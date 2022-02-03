@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>OtherProjects</title>
+  </head>
+  <body>
+    <table style="width:100%" border="2">
+      <tbody>
+        <tr>
+          <td style="text-align:center" colspan="2">
+            <h2>Other Projects</h2>
+          </td>
+        </tr>
+        <tr>
+          <td style="width:20%;text-align:center">
+            <h2>R Tree Library</h2>
+          </td>
+          <td style="width:80%;text-align:left"> <br>
+            <h4> Motivation </h4>
+            During my internship, I was asked to develop a sub-program that can
+            calculate the nearest distance from a given point to a Graph with
+            arbitrary edges. Also, it is better not to sacrifice the
+            accuracy.&nbsp; After studying similar cases, I found it is better
+            to use tree-like data structure such as quad-tree and R-tree.&nbsp;
+            I decided to start from writing a R-tree library because I believe
+            tuning quad-tree parameters was difficult for beginners.&nbsp; By
+            writing the code myself,&nbsp; I can customize the formula that
+            calculate the distance between stored items and given point.&nbsp;
+            Moreover, I can have a thorough understanding to this topic.<br>
+            <h4> Implementation </h4>
+            I did some modification in the insertion step.&nbsp; When we want to
+            insert a new leaf into a tree, if the leaf is not inside of any
+            current bounding box, we have to expand one of the bounding
+            box.&nbsp; Originally we need to choose the box that has minimum
+            expansion size, and we calculate this value by subtracting the area
+            of bounding box after expansion with its original area.&nbsp; I
+            found the new leaf is more easily to be inserted into the bigger
+            bounding boxes because the expansion size for added into a bigger
+            bounding box is often zero.&nbsp; The consequence is that the big
+            bounding box will get bigger and affects the knn serach efficiency
+            because it is difficult to "trim a search" that contains a large
+            area(and a alot of possible answers). &nbsp; A simple modification
+            that can improve this problem is that we skip the subtraction step,
+            that is, we choose the bounding box with "the smallest area after
+            expansion" during insertion.&nbsp; This speed up the knn search by
+            roughly 10~20%.<br>
+            <br>
+            By the way, I used quadratic split algorithm in the insertion steps.
+            In conclusion, this is close to original R-Tree with some
+            modifications like one mentioned above. <br>
+            <h4> Visualize stored data </h4>
+            <p>To make debugging easier, I decided to write a python script that
+              visualizes bounding boxes in each level of the current tree.<br>
+              <img src="file:../Picture/RtreeVisualize.png" style="width: 540px; height: 300px;"
+                title="RtreeVisualize"><br>
+              The red boxes in the first and second diagram represents bounding
+              boxes of different depths (first and second level).&nbsp; The
+              black boxes represent leaves nodes at the third level. This
+              diagram can easily shows the overlaps between different bounding
+              boxes in the same depth.</p>
+            <h4> Links </h4>
+            <a href="https://github.com/TieneSabor/R_Tree">Source Code on Github</a>
+            <br>
+            <br>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p></p>
+    
+  </body>
+</html>

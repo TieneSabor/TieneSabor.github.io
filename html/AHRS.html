@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>AHRS</title>
+  </head>
+  <body>
+    <table style="width:100%" border="2">
+      <tbody>
+        <tr>
+          <td style="text-align:center" colspan="2">
+            <h2>Attitude &amp; Heading Reference Systems</h2>
+          </td>
+        </tr>
+        <tr>
+          <td style="width:20%;text-align:center">
+            <h2>Motivation</h2>
+          </td>
+          <td style="width:80%;text-align:left"> <br>
+            In NTU aviation club, our ultimate goal is to DIY a RC airplane with
+            acceptable cost. Because it is very difficult to fly a RC airplane
+            for beginner, we believe a stabilize system is indispensable.
+            Therefore, one of the short term goal for this project is to develop
+            an Attitude &amp; Heading Reference Systems (AHRS) utilizing data
+            from 6 axis or 9 axis accelerometer. We believe that an accurate
+            estimation in vehicle heading can be a solid foundation for our
+            future development in RC airplane stabilize system. <br>
+            <br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width:20%;text-align:center">
+            <h2>Design Concepts</h2>
+          </td>
+          <td style="width:80%;text-align:left"><br>
+            The AHRS is based on Joao Luis Marins et al.'s "An Extended Kalman
+            Filter for Quaternion-Based Orientation Estimation Using MARG
+            Sensors".<br>
+            &nbsp;It consists of 4 main components: Linear Algebra Library
+            (basic_linear), Quaternion Operation Library (Quaternion_C), Heading
+            Estimator (Quaternion_Gauss_Newton), and a Sensor Fusion Estimator
+            (Quaternion_EKF).<br>
+            &nbsp;<br>
+            &nbsp; <img src="../Picture/AHRS_Structure.png" style="width: 430px; height: 170px;"
+              alt="AHRSStructure"> <br>
+            The include relation between source code file<br>
+            <br>
+            &nbsp;- Linear Algebra Library provides several matrix operations
+            including Addition, Multiplication, Transpose, Cholesky
+            Decomposition and Inverse.<br>
+            &nbsp;- Quaternion Operation Library provides quaternion operations
+            including Addition, Multiplication, Transpose, etc.<br>
+            &nbsp;- Heading Estimator provides a Gauss-Newton based method that
+            estimate the vehicle heading based on accelerometer data (and
+            optionally magnetometer data).<br>
+            &nbsp;- Sensor Fusion Estimator uses Extended Kalman Filter that
+            combine gyroscope data as well as measured heading (in quaternion)
+            to estimate both vehicle heading and gyroscope bias.<br>
+            <br>
+            The main difference between this AHRS method and the one provided by
+            Joao Luis Marins et al. is that this method is compatible with
+            vehicles that have only accelerometer and gyroscope. (that is,
+            without magnetometer).&nbsp; Also, I implemented this method using
+            basi<br>
+            The method first estimate the vehicle heading using&nbsp; Heading
+            Estimator, then it uses Sensor Fusion Estimator to combine gyroscope
+            measurement with heading estimation.&nbsp; Also, we can estimate
+            gyroscope bias recursively.<br>
+            <br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width:20%;text-align:center">
+            <h2>Implementation and Validation</h2>
+          </td>
+          <td style="width:80%;text-align:left"><br>
+            <h4>&nbsp;Validation on PC</h4>
+            <img src="../Picture/RollRate.png" style="width: 500px; height: 340px;"
+              alt="Rollrate"><br>
+            To validate the Sensor Fusion Estimator, I assume the roll angle has
+            a constant rate 0.05 and a constant bias 0.005, then I can feed the
+            simulated heading and roll rate measurement into the
+            estimator.&nbsp; From the chart, we can see that the estimator has
+            successfully estimated the roll rate bias and produce correct roll
+            rate estimation.<br>
+            <h4>&nbsp;Links </h4>
+            <a href="https://github.com/TieneSabor/Simple_AHRS">Source Code on
+              Github</a><br>
+            <br>
+          </td>
+        </tr>
+        <tr>
+          <td style="width:20%;text-align:center">
+            <h2>Future Works</h2>
+          </td>
+          <td style="width:80%;text-align:center">
+            <h4>Test Flight On Actual RC Airplane</h4>
+            <img src="../Picture/RCPlane.jpg" style="width: 480px; height: 320px;"
+              alt="RCPlane"> <br>
+            The test platform: DIY RC airplane <br>
+            <br>
+            <img src="../Picture/GIF/RollControl.gif" style="width: 480px; height: 270px;"
+              alt="RollControl"> <br>
+            Roll Control on a modified sail plane.&nbsp; We can see the AHRS can
+            correctly estimate the roll angle. <br>
+            <br>
+            <img src="../Picture/GIF/PitchControl.gif" style="width: 480px; height: 270px;"
+              alt="PitchControl"> <br>
+            &nbsp; Pitch Control on a modified sail plane.&nbsp; We can see the
+            AHRS can correctly estimate the pitch angle. <br>
+            <br>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p></p>
+  </body>
+</html>
