@@ -20,11 +20,11 @@
             In NTU aviation club, our ultimate goal is to DIY a RC airplane with
             acceptable cost. Because it is very difficult to fly a RC airplane
             for beginner, we believe a stabilize system is indispensable.
-            Therefore, one of the short term goal for this project is to develop
-            an Attitude &amp; Heading Reference Systems (AHRS) utilizing data
-            from 6 axis or 9 axis accelerometer. We believe that an accurate
-            estimation in vehicle heading can be a solid foundation for our
-            future development in RC airplane stabilize system. <br>
+            Therefore, one of the short term goals for this project is to
+            develop an Attitude &amp; Heading Reference Systems (AHRS) utilizing
+            data from 6 axis or 9 axis accelerometer. We believe that an
+            accurate estimation in vehicle heading can be a solid foundation for
+            our future development in RC airplane stabilize system. <br>
             <br>
           </td>
         </tr>
@@ -41,9 +41,9 @@
             Estimator (Quaternion_Gauss_Newton), and a Sensor Fusion Estimator
             (Quaternion_EKF).<br>
             &nbsp;<br>
-            &nbsp; <img src="../Picture/AHRS_Structure.png" style="width: 430px; height: 170px;"
+            &nbsp; <img src="../Picture/AHRS_Structure.png" style="width: 430px; height: 170px;"
               alt="AHRSStructure"> <br>
-            The include relation between source code file<br>
+            The "Include Relation" between source code file<br>
             <br>
             &nbsp;- Linear Algebra Library provides several matrix operations
             including Addition, Multiplication, Transpose, Cholesky
@@ -51,18 +51,18 @@
             &nbsp;- Quaternion Operation Library provides quaternion operations
             including Addition, Multiplication, Transpose, etc.<br>
             &nbsp;- Heading Estimator provides a Gauss-Newton based method that
-            estimate the vehicle heading based on accelerometer data (and
+            estimates the vehicle heading based on accelerometer data (and
             optionally magnetometer data).<br>
             &nbsp;- Sensor Fusion Estimator uses Extended Kalman Filter that
-            combine gyroscope data as well as measured heading (in quaternion)
+            combines gyroscope data as well as measured heading (in quaternion)
             to estimate both vehicle heading and gyroscope bias.<br>
             <br>
             The main difference between this AHRS method and the one provided by
             Joao Luis Marins et al. is that this method is compatible with
             vehicles that have only accelerometer and gyroscope. (that is,
             without magnetometer).&nbsp; Also, I implemented this method using
-            basi<br>
-            The method first estimate the vehicle heading using&nbsp; Heading
+            matrix operations provided by the Linear Algebra Library.<br>
+            The method first estimates the vehicle heading using Heading
             Estimator, then it uses Sensor Fusion Estimator to combine gyroscope
             measurement with heading estimation.&nbsp; Also, we can estimate
             gyroscope bias recursively.<br>
@@ -75,7 +75,7 @@
           </td>
           <td style="width:80%;text-align:left"><br>
             <h4>&nbsp;Validation on PC</h4>
-            <img src="../Picture/RollRate.png" style="width: 500px; height: 340px;"
+            <img src="../Picture/RollRate.png" style="width: 500px; height: 340px;"
               alt="Rollrate"><br>
             To validate the Sensor Fusion Estimator, I assume the roll angle has
             a constant rate 0.05 and a constant bias 0.005, then I can feed the
@@ -95,16 +95,16 @@
           </td>
           <td style="width:80%;text-align:center">
             <h4>Test Flight On Actual RC Airplane</h4>
-            <img src="../Picture/RCPlane.jpg" style="width: 480px; height: 320px;"
+            <img src="../Picture/RCPlane.jpg" style="width: 480px; height: 320px;"
               alt="RCPlane"> <br>
             The test platform: DIY RC airplane <br>
             <br>
-            <img src="../Picture/GIF/RollControl.gif" style="width: 480px; height: 270px;"
+            <img src="../Picture/GIF/RollControl.gif" style="width: 480px; height: 270px;"
               alt="RollControl"> <br>
             Roll Control on a modified sail plane.&nbsp; We can see the AHRS can
             correctly estimate the roll angle. <br>
             <br>
-            <img src="../Picture/GIF/PitchControl.gif" style="width: 480px; height: 270px;"
+            <img src="../Picture/GIF/PitchControl.gif" style="width: 480px; height: 270px;"
               alt="PitchControl"> <br>
             &nbsp; Pitch Control on a modified sail plane.&nbsp; We can see the
             AHRS can correctly estimate the pitch angle. <br>

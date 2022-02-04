@@ -31,17 +31,17 @@
             hope to design a set of functions that solve both flow fields with
             different configuration.
             <h4> Project Result </h4>
-            <img src="../Picture/Couette_Stream.png" style="width: 350px; height: 250px;"
+            <img src="../Picture/Couette_Stream.png" style="width: 350px; height: 250px;"
               title="CouetteStream"> <br>
             The stream line for the simulated Couette flow<br>
             <br>
-            <img src="../Picture/Cavity_Stream.png" style="width: 350px; height: 250px;"
+            <img src="../Picture/Cavity_Stream.png" style="width: 350px; height: 250px;"
               title="CavityStream"> <br>
             The stream line for the simulated Cavity flow<br>
             <h4> Links </h4>
             <a href="https://hackmd.io/bVKmzV6WQP-e8f1idw35Xg?view">Final Report
               on HackMD</a><br>
-            <a href="">Project Code</a> <br>
+            <a href="https://github.com/TieneSabor/SIMPLER">Project Code</a> <br>
             <br>
           </td>
         </tr>
@@ -51,27 +51,28 @@
           </td>
           <td style="width:80%;text-align:left"> <br>
             <h4> Abstract </h4>
-            I aimed at knowing how simulated particle numbers affected the
-            correctness of DSMCFoam. I evaluate the correctness by comparing the
-            simulation data with experiments made by MARHy in CNRS, and plot the
-            variation of correctness when I decreased the particle numbers.
+            The purpose of this project is to understand how simulated particle
+            numbers affected the correctness of DSMCFoam. I evaluate the
+            correctness by comparing the simulation data with experiments made
+            by MARHy in CNRS, and plot the variation of correctness when I
+            decreased the particle numbers.
             <h4> Project Result </h4>
-            <img src="../Picture/bc.png" style="width: 350px; height: 250px;"
-              title="Boundary Condition"> <br>
+            <img src="../Picture/bc.png" style="width: 350px; height: 250px;" title="Boundary Condition">
+            <br>
             The boundary condition set up for the DSMC simulation<br>
             <br>
-            <img src="../Picture/Ma_Number.png" style="width: 350px; height: 250px;"
+            <img src="../Picture/Ma_Number.png" style="width: 350px; height: 250px;"
               title="MaNumber"> <br>
             The Mach number contour over the flow field<br>
             <br>
-            <img src="../Picture/DSMCValidation.png" style="width: 350px; height: 250px;"
+            <img src="../Picture/DSMCValidation.png" style="width: 350px; height: 250px;"
               title="DSMCValidation"> <br>
             The variation of Error Second Norm when decreasing the simulation
             number. The orange and blue data bar represent data in different X
             position.
             <h4> Links </h4>
-            <a href="../Document/dsmcFOAM_Report.pdf">Project Report in
-              Chinese</a> <br>
+            <a href="../Document/dsmcFOAM_Report.pdf">Project Report in Chinese</a>
+            <br>
             <br>
           </td>
         </tr>
@@ -82,17 +83,17 @@
           <td style="width:80%;text-align:left">
             <h4> Abstract </h4>
             The project goal is to study how shock wave-fuel interaction affects
-            combustion. Consider fuel flowing behind the fuel injector. The
+            combustion. Considering fuel flowing behind the fuel injector, the
             cylindrical "fuel tube" will go through reflected shock wave. If we
             see this scene from behind and along with the fuel moving backward,
             the same thing can be seen as a shock wave swipe through a 2D fuel
-            bubble, just like what following picture shows.<br>
-            <img src="../Picture/DSMC_Bubble.png" style="width: 500px; height: 204px;"
+            bubble, as shown in the following picture.<br>
+            <img src="../Picture/DSMC_Bubble.png" style="width: 500px; height: 204px;"
               title="DSMCBubble"> <br>
-            In back view part of the picture, we can see a 2D shock wave
-            front(Red Line) pass through a 2D fuel tube.
+            In Back View part of the picture, we can see a 2D shock wave
+            front(Red Line) is passing through a 2D fuel tube.
             <h4> Simulation </h4>
-            <img src="../Picture/GIF/DSMCFoam.gif" style="width: 500px; height: 340px;"
+            <img src="../Picture/GIF/DSMCFoam.gif" style="width: 500px; height: 340px;"
               title="DSMCFoam"> <br>
             This is the simulation when shock wave pass through 2D fuel
             bubble.&nbsp; We can see the variation of the gas mixture density

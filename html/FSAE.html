@@ -9,8 +9,7 @@
       <tbody>
         <tr>
           <td style="text-align:center" colspan="2">
-            <h2>Data Acquisition System on Formula Student Race Car
-            </h2>
+            <h2>Data Acquisition System on Formula Student Race Car </h2>
           </td>
         </tr>
         <tr>
@@ -20,21 +19,21 @@
           <td style="width:80%;text-align:left"> <br>
             My classmates and I started the FSAE team in National Taiwan
             University in pursuit of experiences in engineering practice. After
-            discussion, we believe logging sensor data from every sensor can be
-            important in this project. <br>
+            discussion, we believed logging sensor data from every sensor could
+            be important in this project. <br>
             <br>
-            First of all, we need a robust way to send the gas pedal and brake
+            First of all, we needed a robust way to send the gas pedal and brake
             signal from the pedals on the car to the motor driver.<br>
-            Secondly, data logger can tell us about the race car performance in
-            certain part of the race track.<br>
-            Lastly, a network that links sensors, vcu and actuators can be a
+            Secondly, data logger could tell us about the race car performance
+            in certain part of the race track.<br>
+            Lastly, a network that links sensors, vcu and actuators could be a
             preliminary work before developing control systems such as Vehicle
             Traction Control or Torque Vectoring. <br>
             <br>
-            As a result, we decided I will lead the electronic team to design
-            and produce a data logging system that connect sensors(wheel speed,
-            GPS, Inertia Measurement Unit, input from the driver, etc), VCU
-            (raspberry Pi 3 B+) and actuators(Motor Driver).<br>
+            As a result, we decided I would lead the electronic team to design
+            and produce a data logging system that connected sensors(wheel
+            speed, GPS, Inertia Measurement Unit, input from the driver, etc),
+            VCU (raspberry Pi 3 B+) and actuators(Motor Driver).<br>
             <br>
           </td>
         </tr>
@@ -43,16 +42,16 @@
             <h2>Design Concepts</h2>
           </td>
           <td style="width:80%;text-align:left"> <br>
-            Regarding many ODM sensors for cars can use CANBUS as communication
+            Regarding many car sensors can use CANBUS as communication
             interfaces, as well as CANBUS differential signal can resist larger
-            external disturbance, we chose CANBUS as main approach to connect
-            individual nodes in our race car. Our nodes include mcus that read
-            the sensors and publish data, VCU that control overall behaviors and
-            actuators like the motor driver. On our VCU, we process the data to
-            monitor the speed, send torque commands to the motor driver via
-            CANBUS and log every other data. <br>
+            external disturbance, we chose CANBUS as the main approach to
+            connect individual nodes in our race car. Our nodes included MCUs
+            that read the sensors and publish data, VCU that controlled overall
+            behaviors and actuators like the motor driver. On our VCU, we
+            processed the data to monitor the speed, sent torque commands to the
+            motor driver via CANBUS and logged every other data. <br>
             <br>
-            <img src="../Picture/data_logger_structure.png" style="width: 550px; height: 200px;"
+            <img src="../Picture/data_logger_structure.png" style="width: 550px; height: 200px;"
               title="Data Logger"> </td>
         </tr>
         <tr>
@@ -66,7 +65,7 @@
             2. The logged data can replay in Matlab and we can do the post
             processing.<br>
             <br>
-            <img src="../Picture/Acceleration.png" style="width: 640px; height: 360px;"
+            <img src="../Picture/Acceleration.png" style="width: 640px; height: 360px;"
               title="Data Logger"><br>
             Logged Data showed in Matlab <br>
             <br>
@@ -79,13 +78,13 @@
           <td style="width:80%;text-align:left"><br>
             1. We will replace arduinos in Front Wheel Node and Rear Wheel Node
             with 32 bit MCU, STM32, to gain better performance, built in CAN
-            controller and better understandings in designing MCU firmware. By
-            the way, we wrote a higher level driver library above Standard
+            controller and better understandings in designing MCU firmware.
+            Furthermore, we wrote a higher level driver library above Standard
             Peripheral Library (SPL) in order to have better code reusibility.
             It's now here: <a href="https://github.com/NTURacingTeam/STM_Library">NTU
               Racing STM Library</a> <br>
             2. We will deploy Extended Kalman Filter in order to estimate
-            vehicle side slip. By doing so, we can take somesafety measures,
+            vehicle side slip. By doing so, we can take some safety measures,
             such as turning off the torque output, when the vehicle lose
             control. In the future, precise side slip and yaw rate estimation
             can be a good reference for our traction control system to guarantee
@@ -99,11 +98,11 @@
             <h2>Galleries</h2>
           </td>
           <td style="width:80%;text-align:center"><br>
-            <img src="../Picture/Unprocessed/FSAE_EP2.jpg" style="width: 480px; height: 300px;"
+            <img src="../Picture/Unprocessed/FSAE_EP2.jpg" style="width: 480px; height: 300px;"
               alt=""> <br>
             Ep 2: Second generation race car in NTU Racing Team<br>
             <br>
-            <img src="../Picture/Unprocessed/FSAE_EP1.JPG" style="width: 480px; height: 300px;"
+            <img src="../Picture/Unprocessed/FSAE_EP1.JPG" style="width: 480px; height: 300px;"
               alt=""> <br>
             Ep 1: First generation race car in NTU Racing Team<br>
             <br>
