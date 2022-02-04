@@ -23,20 +23,20 @@
             arbitrary edges. After studying similar cases, I found it was better
             to use tree-like data structure such as quad-tree and R-tree
             considering accuracy and search speed.&nbsp; I decided to start from
-            writing a R-tree library because I believed tuning quad-tree
-            parameters was difficult for beginners.&nbsp; By writing the code
-            myself,&nbsp; I could customize the formula that calculates the
-            distance between stored items and given points.&nbsp; Moreover, I
-            could have a thorough understanding to this topic.<br>
+            writing a R-tree from scratch because quad-tree required tiling
+            level tuning.&nbsp; Furthermore,&nbsp; I could customize the formula
+            that calculates the distance between stored items and given
+            points.&nbsp; Moreover, I could have a thorough understanding to
+            this topic.<br>
             <h4> Implementation </h4>
             I did some modification in the insertion step.&nbsp; When we
             inserted a new leaf into a tree, if the leaf was not inside of any
             current bounding box, we had to expand one of the bounding
-            box.&nbsp; Originally we needed to choose the box that had minimum
+            boxes.&nbsp; Originally we needed to choose the box that had minimum
             expansion size, and we calculated this value by subtracting the area
             of bounding box after expansion with its original area.&nbsp; I
             found the new leaf was more easily to be inserted into the bigger
-            bounding boxes because the expansion size for added into a bigger
+            bounding boxes because the expansion size for adding into a bigger
             bounding box was often zero.&nbsp; The consequence was that the big
             bounding box would get bigger and affect the knn search efficiency
             because a big bounding box could lead to more overlap area. &nbsp; A

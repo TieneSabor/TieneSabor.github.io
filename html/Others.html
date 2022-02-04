@@ -32,15 +32,15 @@
             I did some modification in the insertion step.&nbsp; When we
             inserted a new leaf into a tree, if the leaf was not inside of any
             current bounding box, we had to expand one of the bounding
-            box.&nbsp; Originally we needed to choose the box that had minimum
+            boxes.&nbsp; Originally we needed to choose the box that had minimum
             expansion size, and we calculated this value by subtracting the area
             of bounding box after expansion with its original area.&nbsp; I
             found the new leaf was more easily to be inserted into the bigger
-            bounding boxes because the expansion size for added into a bigger
+            bounding boxes because the expansion size for adding into a bigger
             bounding box was often zero.&nbsp; The consequence was that the big
             bounding box would get bigger and affect the knn search efficiency
             because a big bounding box could lead to more overlap area. &nbsp; A
-            simple modification that could improve this problem was that we
+            simple modification that could solve this problem was that we
             skipped the subtraction step, that is, we chose the bounding box
             with "the smallest area after expansion" during insertion.&nbsp;
             This speeded up the knn search by roughly 10~20%.<br>
