@@ -42,14 +42,14 @@
             <h2>Design Concepts</h2>
           </td>
           <td style="width:80%;text-align:left"> <br>
-            Regarding many car sensors can use CANBUS as communication
-            interfaces, as well as CANBUS differential signal can resist larger
-            external disturbance, we chose CANBUS as the main approach to
-            connect individual nodes in our race car. Our nodes included MCUs
-            that read the sensors and publish data, VCU that controlled overall
-            behaviors and actuators like the motor driver. On our VCU, we
-            processed the data to monitor the speed, sent torque commands to the
-            motor driver via CANBUS and logged every other data. <br>
+            Since many car sensors use CANBUS as communication interfaces, and
+            CANBUS differential signal can resist larger external disturbance,
+            we chose CANBUS as the main approach to connect individual nodes in
+            our race car. Our nodes included MCUs that read the sensors and
+            publish data, VCU that controlled overall behaviors and actuators
+            like the motor driver. On our VCU, we processed the data to monitor
+            the speed, sent torque commands to the motor driver via CANBUS and
+            logged every other data. <br>
             <br>
             <img src="../Picture/data_logger_structure.png" style="width: 550px; height: 200px;"
               title="Data Logger"> </td>

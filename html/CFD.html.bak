@@ -95,7 +95,7 @@
             <h4> Simulation </h4>
             <img src="../Picture/GIF/DSMCFoam.gif" style="width: 500px; height: 340px;"
               title="DSMCFoam"> <br>
-            This is the simulation when shock wave pass through 2D fuel
+            This is the simulation when the shock wave passes through 2D fuel
             bubble.&nbsp; We can see the variation of the gas mixture density
             over time.&nbsp; Reaction simulation is not included in this
             animation.<br>
@@ -103,7 +103,7 @@
             I will compare the simulation result between those with and without
             reaction.&nbsp; If the reaction is simulated, there will be
             combustion happens on the boundary between Oxigen and fuel.&nbsp;
-            Therefore, we can seehow shock wave affect the combustion.<br>
+            Therefore, we can see how shock wave affect the combustion.<br>
             <br>
           </td>
         </tr>

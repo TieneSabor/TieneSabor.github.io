@@ -18,10 +18,10 @@
           </td>
           <td style="width:80%;text-align:left"> <br>
             <h4> Motivation </h4>
-            During my internship, I was asked to develop a sub-program that
-            could calculate the nearest distance from a given point to a Graph
-            with arbitrary edges. After studying similar cases, I found it was
-            better to use tree-like data structure such as quad-tree and R-tree
+            During my internship, my job was to develop a sub-program that could
+            calculate the nearest distance from a given point to a Graph with
+            arbitrary edges. After studying similar cases, I found it was better
+            to use tree-like data structure such as quad-tree and R-tree
             considering accuracy and search speed.&nbsp; I decided to start from
             writing a R-tree library because I believed tuning quad-tree
             parameters was difficult for beginners.&nbsp; By writing the code
@@ -53,10 +53,10 @@
               visualizes bounding boxes in each level of the current tree.<br>
               <img src="../Picture/RtreeVisualize.png" style="width: 540px; height: 300px;"
                 title="RtreeVisualize"><br>
-              The red boxes in the first and second diagram represents bounding
+              The red boxes in the first and second diagram represent bounding
               boxes of different depths (first and second level).&nbsp; The
               black boxes represent leaves nodes at the third level. This
-              diagram can easily shows the overlaps between different bounding
+              diagram can easily show the overlaps between different bounding
               boxes in the same depth.</p>
             <h4> Links </h4>
             <a href="https://github.com/TieneSabor/R_Tree">Source Code on Github</a>

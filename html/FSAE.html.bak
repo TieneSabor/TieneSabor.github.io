@@ -84,7 +84,7 @@
             It's now here: <a href="https://github.com/NTURacingTeam/STM_Library">NTU
               Racing STM Library</a> <br>
             2. We will deploy Extended Kalman Filter in order to estimate
-            vehicle side slip. By doing so, we can take somesafety measures,
+            vehicle side slip. By doing so, we can take some safety measures,
             such as turning off the torque output, when the vehicle lose
             control. In the future, precise side slip and yaw rate estimation
             can be a good reference for our traction control system to guarantee
